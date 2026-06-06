@@ -10,7 +10,7 @@
     "prepare-images": "node scripts/prepare_images.mjs"
   },
   "dependencies": {
-    "@vercel/kv": "^2.0.0",
+    "@supabase/supabase-js": "^2.45.0",
     "next": "14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

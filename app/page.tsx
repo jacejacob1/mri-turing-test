@@ -7,11 +7,8 @@ type Stage = "landing" | "intake" | "instructions" | "test" | "done";
 interface IntakeData {
   fullName: string;
   hospital: string;
-  yearsExperience: string;
   specialization: string;
   specializationOther: string;
-  boardCertified: string; // "yes" | "no" | ""
-  email: string;
   consent: boolean;
 }
 
@@ -26,11 +23,8 @@ export default function Page() {
   const [intake, setIntake] = useState<IntakeData>({
     fullName: "",
     hospital: "",
-    yearsExperience: "",
     specialization: "",
     specializationOther: "",
-    boardCertified: "",
-    email: "",
     consent: false,
   });
 
@@ -78,12 +72,9 @@ export default function Page() {
   const intakeValid =
     intake.fullName.trim() !== "" &&
     intake.hospital.trim() !== "" &&
-    intake.yearsExperience !== "" &&
-    Number(intake.yearsExperience) >= 0 &&
     intake.specialization !== "" &&
     (intake.specialization !== "Other" ||
       intake.specializationOther.trim() !== "") &&
-    intake.boardCertified !== "" &&
     intake.consent;
 
   // ---- Start the test (after intake) ----
@@ -101,10 +92,7 @@ export default function Page() {
         body: JSON.stringify({
           fullName: intake.fullName.trim(),
           hospital: intake.hospital.trim(),
-          yearsExperience: Number(intake.yearsExperience),
           specialization: spec,
-          boardCertified: intake.boardCertified === "yes",
-          email: intake.email.trim() || null,
         }),
       });
       const d = await res.json();
@@ -212,35 +200,6 @@ export default function Page() {
             placeholder="General Hospital"
           />
 
-          <div className="field-row">
-            <div>
-              <label>Years of experience</label>
-              <input
-                type="number"
-                min={0}
-                max={60}
-                value={intake.yearsExperience}
-                onChange={(e) =>
-                  setIntake({ ...intake, yearsExperience: e.target.value })
-                }
-                placeholder="8"
-              />
-            </div>
-            <div>
-              <label>Board certified?</label>
-              <select
-                value={intake.boardCertified}
-                onChange={(e) =>
-                  setIntake({ ...intake, boardCertified: e.target.value })
-                }
-              >
-                <option value="">Select…</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
-
           <label>Specialization</label>
           <select
             value={intake.specialization}
@@ -265,14 +224,6 @@ export default function Page() {
               placeholder="Please specify"
             />
           )}
-
-          <label>Email (optional — to receive the published paper)</label>
-          <input
-            type="email"
-            value={intake.email}
-            onChange={(e) => setIntake({ ...intake, email: e.target.value })}
-            placeholder="name@hospital.org"
-          />
 
           <div className="consent">
             <input

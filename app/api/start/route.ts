@@ -46,24 +46,9 @@ export async function POST(req: NextRequest) {
   }
 
   // New rater: validate intake
-  const {
-    fullName,
-    hospital,
-    yearsExperience,
-    specialization,
-    boardCertified,
-    email,
-  } = body;
+  const { fullName, hospital, specialization } = body;
 
-  if (
-    !fullName ||
-    !hospital ||
-    yearsExperience === undefined ||
-    yearsExperience === null ||
-    !specialization ||
-    boardCertified === undefined ||
-    boardCertified === null
-  ) {
+  if (!fullName || !hospital || !specialization) {
     return NextResponse.json(
       { error: "Missing required intake fields" },
       { status: 400 }
@@ -90,10 +75,7 @@ export async function POST(req: NextRequest) {
     createdAt: new Date().toISOString(),
     fullName: String(fullName),
     hospital: String(hospital),
-    yearsExperience: Number(yearsExperience),
     specialization: String(specialization),
-    boardCertified: Boolean(boardCertified),
-    email: email ? String(email) : null,
     order,
     progress: 0,
     completed: false,

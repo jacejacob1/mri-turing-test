@@ -6,9 +6,9 @@
  * Protected by ADMIN_TOKEN env var. If the token is missing or wrong, 401.
  *
  * CSV columns (long format, one row per rater-image rating):
- *   rater_id, full_name, hospital, years_experience, specialization,
- *   board_certified, sequence_index, image_filename, true_class, decision,
- *   correct, confidence, tumor_visibility, response_time_ms, submitted_at, notes
+ *   rater_id, full_name, hospital, specialization, sequence_index,
+ *   image_filename, true_class, decision, correct, confidence,
+ *   tumor_visibility, response_time_ms, submitted_at, notes
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -43,9 +43,7 @@ export async function GET(req: NextRequest) {
     "rater_id",
     "full_name",
     "hospital",
-    "years_experience",
     "specialization",
-    "board_certified",
     "sequence_index",
     "image_filename",
     "true_class",
@@ -72,9 +70,7 @@ export async function GET(req: NextRequest) {
         rater.id,
         rater.fullName,
         rater.hospital,
-        rater.yearsExperience,
         rater.specialization,
-        rater.boardCertified ? "yes" : "no",
         r.sequenceIndex,
         r.imageFilename,
         r.trueClass,
