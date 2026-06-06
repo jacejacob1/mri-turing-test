@@ -1,0 +1,10 @@
+# Exclude large training-data / experiment folders from the deployment.
+# Only public/images (the 100 hashed study images) and the app code ship.
+h5_train/
+overlay_train/
+proposed_inline_seed0_v2/
+source_images/
+node_modules/
+.next/
+*.log
+.DS_Store

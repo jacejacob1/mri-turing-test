@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.env*.local
+.DS_Store
+*.log
+.vercel
+next-env.d.ts
+
+# Large training-data / experiment folders — never commit or deploy these.
+# public/images/ IS committed on purpose (the study images ship with the app).
+h5_train/
+overlay_train/
+proposed_inline_seed0_v2/
+source_images/

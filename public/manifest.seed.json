@@ -1,0 +1,406 @@
+{
+  "images": [
+    {
+      "filename": "img_b5c60763f66e20ec.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_ea6918f8fee6a80f.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_784e52e8a617ae6f.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_e0be400d258bdcfc.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_a0f1dea9c137e774.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_8205353af0652855.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_a4fa2661f6334a10.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_bc2b903dfba1df25.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_06731070f5ec13f8.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_c3c5151d685db21f.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_24edf230e8c32465.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_6086215389cd6745.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_f9329f67494a7b63.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_476689bc707b98db.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_1c43fc707f4f3775.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_191ac666543c4673.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_dbde13176eefb43e.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_bb5e801e6e81618a.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_518eb8a4d50a997a.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_23637850f6bb1e48.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_9d05e1a58db5f136.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_f4b1c842d7aaf9ef.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_18cb8e12412b27bd.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_b6cc7c47a67c680a.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_bfa76480e3cee3d3.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_470e3b54d6680084.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_fef5fe2735236e2a.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_1de70ea04b44a670.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_9f532e14b6e2b5b4.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_0436c8468ef61d49.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_aab0a12dbca645cd.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_db32f5ef11f948ab.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_d12a778c3ce059a2.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_d99d5133f8580673.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_ae07c4cf6ac58b99.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_372ba3ebbdf462be.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_5b16633e47b25ffe.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_33ac9fcfebaa80a2.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_7b0f15ab15b4e875.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_3c1ddf246044608b.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_9347270aab15b7d1.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_e448750b52c8420c.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_160202233544f138.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_1e68f43231b90d05.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_008b1536598e8157.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_dc2e8eab3685e7f4.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_05f1459ab70974e0.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_0b062b4cb93ea597.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_aa3da1de83f3f9b5.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_09776a7c2c73639a.png",
+      "trueClass": "real"
+    },
+    {
+      "filename": "img_83ff9033014cdde1.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_503f44a1f212d7a3.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_4f9465575d20b908.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_656032ab3a280695.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_b1c3e2bd32393a27.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_b53ee69f464e8237.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_f4f978994e7fbc1c.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_caa2906b9e71d1e9.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_d2b7344d93689084.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_afd1420397ceb8d6.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_1b79dc7620f049fa.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_55ea5fbdd91b62b0.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_97cb52f45177827c.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_755ffd77c17963d1.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_d8b4db167f9cd615.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_daab115d9374d3b6.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_614bd8f3e4dc33e2.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_bfb393ab6b14d95a.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_d18ec89dd64d9e0d.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_8587c7493e884997.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_78530a18eeb8aae9.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_601c4981da1e0411.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_1da962443356398d.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_69ab98d9a1e3c790.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_13ad638ff6a960d4.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_dd43b5fbc83af3ef.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_959d1a0bbac2500a.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_55289073fb473c24.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_709c36e9c2acdac0.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_2d2df8908a5daffb.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_0e06bdf273f694a1.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_7f3e35a592ec1daa.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_99ae48009b0a127d.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_7e85dc7f2652dbb9.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_f6946c33dfa1864c.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_9495be4cf2daa9b5.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_5128488fc6f7ce99.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_b35f209f7b82dbfd.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_41fb503aa318d2bd.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_c63d977a071124eb.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_370e1c1b5081adc3.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_b779a68ea97cd2dd.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_adf373b300c9d56d.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_64606b288f33e048.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_558e9bbcd5d843d1.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_ec211a0f0ba88a88.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_3f7cc8f99ea06e50.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_5f3f83595e5cc0a7.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_95c2847a0039c519.png",
+      "trueClass": "synthetic"
+    },
+    {
+      "filename": "img_aa3c6cbf0b626300.png",
+      "trueClass": "synthetic"
+    }
+  ],
+  "count": 100,
+  "createdAt": "2026-06-06T06:23:05.429Z"
+}
