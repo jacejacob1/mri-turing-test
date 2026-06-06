@@ -5,12 +5,15 @@ create table if not exists raters (
   id             text primary key,
   created_at     timestamptz not null default now(),
   full_name      text not null,
-  hospital       text not null,
-  specialization text not null,
   order_indices  jsonb not null,
   progress       integer not null default 0,
   completed      boolean not null default false
 );
+
+-- If you already ran an earlier version of this schema (with hospital /
+-- specialization columns), drop them so inserts don't fail on NOT NULL:
+alter table raters drop column if exists hospital;
+alter table raters drop column if exists specialization;
 
 create table if not exists responses (
   rater_id        text not null references raters(id) on delete cascade,

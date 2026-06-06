@@ -6,9 +6,6 @@ type Stage = "landing" | "intake" | "instructions" | "test" | "done";
 
 interface IntakeData {
   fullName: string;
-  hospital: string;
-  specialization: string;
-  specializationOther: string;
   consent: boolean;
 }
 
@@ -22,9 +19,6 @@ export default function Page() {
 
   const [intake, setIntake] = useState<IntakeData>({
     fullName: "",
-    hospital: "",
-    specialization: "",
-    specializationOther: "",
     consent: false,
   });
 
@@ -69,30 +63,18 @@ export default function Page() {
   }, []);
 
   // ---- Intake validation ----
-  const intakeValid =
-    intake.fullName.trim() !== "" &&
-    intake.hospital.trim() !== "" &&
-    intake.specialization !== "" &&
-    (intake.specialization !== "Other" ||
-      intake.specializationOther.trim() !== "") &&
-    intake.consent;
+  const intakeValid = intake.fullName.trim() !== "" && intake.consent;
 
   // ---- Start the test (after intake) ----
   const beginTest = useCallback(async () => {
     setBusy(true);
     setError(null);
-    const spec =
-      intake.specialization === "Other"
-        ? intake.specializationOther.trim()
-        : intake.specialization;
     try {
       const res = await fetch("/api/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: intake.fullName.trim(),
-          hospital: intake.hospital.trim(),
-          specialization: spec,
         }),
       });
       const d = await res.json();
@@ -176,8 +158,8 @@ export default function Page() {
           <p className="eyebrow">Participant Information</p>
           <h1>Before we begin</h1>
           <p className="lead">
-            All fields are required. Your name will be acknowledged in the
-            published paper. Your ratings are stored anonymously for analysis.
+            Your name will be acknowledged in the published paper. Your ratings
+            are stored anonymously for analysis.
           </p>
 
           <label>Full name</label>
@@ -189,41 +171,6 @@ export default function Page() {
             }
             placeholder="Dr. Jane Doe"
           />
-
-          <label>Hospital / Institution</label>
-          <input
-            type="text"
-            value={intake.hospital}
-            onChange={(e) =>
-              setIntake({ ...intake, hospital: e.target.value })
-            }
-            placeholder="General Hospital"
-          />
-
-          <label>Specialization</label>
-          <select
-            value={intake.specialization}
-            onChange={(e) =>
-              setIntake({ ...intake, specialization: e.target.value })
-            }
-          >
-            <option value="">Select…</option>
-            <option value="Neuroradiology">Neuroradiology</option>
-            <option value="General Radiology">General Radiology</option>
-            <option value="Diagnostic Radiology">Diagnostic Radiology</option>
-            <option value="Other">Other</option>
-          </select>
-
-          {intake.specialization === "Other" && (
-            <input
-              type="text"
-              value={intake.specializationOther}
-              onChange={(e) =>
-                setIntake({ ...intake, specializationOther: e.target.value })
-              }
-              placeholder="Please specify"
-            />
-          )}
 
           <div className="consent">
             <input
@@ -275,8 +222,7 @@ export default function Page() {
               Rate your confidence from 1 (pure guess) to 5 (very confident).
             </li>
             <li>
-              Optionally rate how clearly a tumor is visible, and add a brief
-              note about what informed your decision.
+              Optionally add a brief note about what informed your decision.
             </li>
             <li>
               You cannot return to a previous image. First impressions are what
@@ -349,7 +295,6 @@ function TestStage({
   const [loadingImg, setLoadingImg] = useState(true);
   const [decision, setDecision] = useState<"real" | "synthetic" | null>(null);
   const [confidence, setConfidence] = useState<number>(3);
-  const [tumorVis, setTumorVis] = useState<number | null>(null);
   const [notes, setNotes] = useState("");
   const [showNotes, setShowNotes] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -389,7 +334,6 @@ function TestStage({
   const reset = () => {
     setDecision(null);
     setConfidence(3);
-    setTumorVis(null);
     setNotes("");
     setShowNotes(false);
   };
@@ -408,7 +352,7 @@ function TestStage({
           sequenceIndex: seq,
           decision,
           confidence,
-          tumorVisibility: tumorVis,
+          tumorVisibility: null,
           notes,
           responseTimeMs,
         }),
@@ -429,7 +373,7 @@ function TestStage({
       setErr("Network error submitting. Your previous answers are saved.");
     }
     setSubmitting(false);
-  }, [decision, confidence, tumorVis, notes, raterId, seq, onComplete]);
+  }, [decision, confidence, notes, raterId, seq, onComplete]);
 
   const pct = Math.round(((seq - 1) / total) * 100);
 
@@ -485,27 +429,6 @@ function TestStage({
         <div className="conf-ends">
           <span>Pure guess</span>
           <span>Very confident</span>
-        </div>
-      </div>
-
-      <div className="tumor-note">
-        <div className="confidence-label">
-          Tumor visibility (optional)
-        </div>
-        <div className="conf-scale">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <button
-              key={n}
-              className={`conf-btn ${tumorVis === n ? "selected" : ""}`}
-              onClick={() => setTumorVis(tumorVis === n ? null : n)}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-        <div className="conf-ends">
-          <span>None visible</span>
-          <span>Clear borders</span>
         </div>
       </div>
 

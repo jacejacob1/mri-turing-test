@@ -63,8 +63,6 @@ export interface RaterRecord {
   id: string;
   createdAt: string;
   fullName: string;
-  hospital: string;
-  specialization: string;
   /** Per-rater deterministic shuffle order: array of manifest indices */
   order: number[];
   /** How many responses submitted so far */
@@ -93,8 +91,6 @@ interface RaterRow {
   id: string;
   created_at: string;
   full_name: string;
-  hospital: string;
-  specialization: string;
   order_indices: number[];
   progress: number;
   completed: boolean;
@@ -105,8 +101,6 @@ function rowToRater(r: RaterRow): RaterRecord {
     id: r.id,
     createdAt: r.created_at,
     fullName: r.full_name,
-    hospital: r.hospital,
-    specialization: r.specialization,
     order: r.order_indices,
     progress: r.progress,
     completed: r.completed,
@@ -118,8 +112,6 @@ function raterToRow(r: RaterRecord): RaterRow {
     id: r.id,
     created_at: r.createdAt,
     full_name: r.fullName,
-    hospital: r.hospital,
-    specialization: r.specialization,
     order_indices: r.order,
     progress: r.progress,
     completed: r.completed,
